@@ -213,7 +213,7 @@ export class ResourceValidator implements IOrchestratable {
         return result;
     }
 
-    private validateRuntimeSku(state: StateConstant, context: IActionContext) {
+    private validateRuntimeSku(_: StateConstant, context: IActionContext) {
         if (context.os === undefined || context.sku === undefined) {
             return;
         }
