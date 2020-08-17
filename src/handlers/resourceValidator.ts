@@ -217,12 +217,6 @@ export class ResourceValidator implements IOrchestratable {
         if (context.os === undefined || context.sku === undefined) {
             return;
         }
-
-        // Linux Elastic Premium is not supported
-        if (context.os === RuntimeStackConstant.Linux && context.sku === FunctionSkuConstant.ElasticPremium) {
-            throw new ValidationError(state, 'Function Runtime',
-                "Linux ElasticPremium plan is not yet supported");
-        }
     }
 
     private validateLanguage(state: StateConstant, context: IActionContext) {
