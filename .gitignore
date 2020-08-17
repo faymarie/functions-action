@@ -5,7 +5,7 @@
 
 # Github Actions master branch will not have node_modules (use v1 instead)
 # node_modules/
-lib/
+# lib/
 
 # User-specific files
 *.suo
